@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 // Responsive mixins
 // Bootstrap breakpoints
 
@@ -31,7 +31,7 @@
     header {
         color: white;
         font-size: 22px;
-        font-family: "Roboto", sans-serif;
+        
         display: flex;
         height: 100px;
         align-items: center;
@@ -46,7 +46,7 @@
         
         @include mobile {
             flex-direction: column;
-            background: red;
+            //background: red;
             height: min-content;
         }
         
