@@ -1,4 +1,3 @@
-
 // Responsive mixins
 // Bootstrap breakpoints
 
@@ -25,13 +24,14 @@
     }
 }
 .header-parent {
+    display: flex;
     position: absolute;
     height: 100%;
     width: 100%;
     header {
+        
         color: white;
         font-size: 22px;
-        
         display: flex;
         height: 100px;
         align-items: center;
@@ -40,34 +40,68 @@
         z-index: 100000000000;
         width: 100%;
         top: 0px;
+        flex-direction: row;
         background: rgb(37, 47, 37);
         background: linear-gradient(180deg, rgba(62, 77, 62, 1) 50%, rgba(0, 0, 0, 0) 100%);
-        flex-direction: row;
-        
-        @include mobile {
-            flex-direction: column;
-            //background: red;
-            height: min-content;
-        }
         
 
-        .item-header {
+        .displayer {
+
+            position: absolute;
+            right: 30px;
+            top: 25px;
+            border: 2px solid white;
+            border-radius: 10%;
+            color: white;
+            width: 40px;
+            height: 40px;            
+            justify-content: center;
+            align-items: center;
+            display: none;
+            text-decoration: none;
+            transition: background-color,width 0.5s;
+            &:focus{                
+                background-color: #c5c5c57d;;                
+            }
+            
+            @include mobile {
+                display: flex;
+            }
+
+            
+        }
+        .item-header-logo{
             margin: 20px;
             border-bottom: 5px solid rgba(0, 255, 149, 0);
-            border-left: 5px solid rgba(0, 255, 149, 0);
-        }
-
-        .logo {
+            border-left: 5px solid rgba(0, 255, 149, 0);    
             font-size: 30px;
             display: flex;
             align-items: center;
             font-weight: 900;
             border-bottom: 5px inset rgba(0, 255, 149, 0.219);
             border-left: 5px inset rgba(0, 255, 149, 0.219);
-            margin: 10px;
+            margin: 10px;       
             img {
                 width: 50px;
                 margin: 10px;
+            } 
+        }
+
+        .item-header{
+            margin: 20px;
+            border-bottom: 5px solid rgba(0, 255, 149, 0);
+            border-left: 5px solid rgba(0, 255, 149, 0);
+        }
+
+        @include mobile {
+            justify-content: center;
+            flex-direction: column;
+            height: min-content;
+            .item-header {
+                height: 0px;
+                overflow: hidden;
+                margin: 0px;
+                border: 0;
             }
         }
     }
