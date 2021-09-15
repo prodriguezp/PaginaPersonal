@@ -1,18 +1,32 @@
-.redes {
-    margin: 10px;
-    h5{
-        width: calc(min-width + 100px);
-        border-bottom: 3px solid;
-        padding-bottom: 20px;
-    }
-    .list-redes{
-        display: flex;
-        align-items: center;
-        img{
-            margin-right: 10px;
-            margin-bottom: 10px;
-            width: 35px;
+.footer{
+    background: #829459;
+    color: white;
+    background: linear-gradient(0deg, #829459 95%, rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    position: relative;
+    bottom: 0px;
+    padding-top: 30px;
+    .redes {
+        margin: 15px;
+        margin-top: 20px;
+        width: 15%;
+        padding: 10px;
+        padding-right: 40px;
+        border-right: #43504f inset 3px;
+        h2{
+            width: calc(min-width + 100px);
+            border-bottom: 3px solid;            
+            border-bottom: 5px inset rgb(44, 82, 66);            
         }
+        .list-redes{
+            display: flex;
+            align-items: center;
+            img{
+                margin-right: 10px;
+                margin-bottom: 10px;
+                width: 25px;
+            }
+        }
+        
     }
-    
 }

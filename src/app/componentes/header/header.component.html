@@ -1,10 +1,23 @@
-<div class="header-parent">
+<!--<div class="header-parent">
     
     <header>                
+        <a href="#" class="displayer" (click)="cambiar(!mostrar)" ><mat-icon>reorder</mat-icon></a>
         <div class="item-header-logo"><img src="assets/img/ajustes.png" alt="">PL.Dev</div>
-        <div class="item-header">Inicio</div>
-        <div class="item-header">Proyectos</div>
-        <div class="item-header">Contacta</div>
-        <a href="#" class="displayer"><mat-icon>reorder</mat-icon></a>
+        <div [style.height]="mostrar ? '30px' : '0px' " class="item-header" >Inicio</div>
+        <div [style.height]="mostrar ? '30px' : '0px' " class="item-header" >Proyectos</div>
+        <div [style.height]="mostrar ? '30px' : '0px' " class="item-header" >Contacta</div>        
     </header>
 </div>
+
+-->
+<header>
+    <h1><span>&lt;</span>Pedro Luis Dev<span>/&gt;</span></h1>
+    <h2><span>&lt;</span>Desarrollador FullStack Web / Java<span>/&gt;</span></h2>
+
+    <nav>
+        <div routerLink="/header" routerLinkActive="active-header-item">INICIO</div>
+        <div routerLink="/footer" routerLinkActive="active-header-item">PROYECTOS</div>
+        <div routerLink="/banner" routerLinkActive="active-header-item">CONTACTO</div>    
+    </nav>
+
+</header>

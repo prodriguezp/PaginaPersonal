@@ -1,6 +1,19 @@
-.banner{  
-    img{
+.banner {
+        
+    margin-top: -25px;
+    h1 {
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        position: absolute;
+        text-shadow: 2px 4px 2px #009688;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+    }
+    img {        
         width: 100%;
         opacity: 0.7;
-    }  
+    }
 }
