@@ -9,7 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 
 import { Routes, RouterModule } from '@angular/router';
-import { InicioComponent } from './inicio/inicio.component'; // CLI
+import { InicioComponent } from './inicio/inicio.component';
+import { GridImagenesComponent } from './componentes/grid-imagenes/grid-imagenes.component'; // CLI
 
 @NgModule({
   declarations: [
@@ -17,10 +18,12 @@ import { InicioComponent } from './inicio/inicio.component'; // CLI
     HeaderComponent,
     BannerComponent,
     FooterComponent,
-    InicioComponent
+    InicioComponent,
+    GridImagenesComponent
   ],
   imports: [
     RouterModule.forRoot([      
+      { path: '',component: InicioComponent},
       { path: 'footer',component: FooterComponent},
       { path: 'header',component: HeaderComponent},
       { path: 'banner',component: BannerComponent},

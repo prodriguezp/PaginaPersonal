@@ -1,6 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 
-*{
+* {
     font-family: "Roboto", sans-serif;
+    margin: 0px;
+}
+.parent {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+}
+.derecha {
+    z-index: 1000000000;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgb(57, 58, 65);;
+    width: 50%;
+    height: 100%;
+    animation-name: fadeInDerecha;
+    animation-duration: 2s;
+    animation-delay: 2s;    
+    animation-fill-mode: forwards;
+    text-align: end;
+}
+
+.izquierda {
+    z-index: 1000000000;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    background: rgb(57, 58, 65);
+    width: 50%;
+    left: 50%;
+    animation-name: fadeInIzquierda;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;    
+    
+}
+
+@keyframes fadeInDerecha {
+    0% {
+        opacity: 1;
+        left: 0px;
+    }
+    100% {
+        opacity: 0;
+        left: -100%;
+    }
+}
+
+@keyframes fadeInIzquierda {
+    0% {
+        opacity: 1;
+        left: 50%;
+    }
+    100% {
+        opacity: 0;
+        left: 150%;
+    }
 }

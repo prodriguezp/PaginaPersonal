@@ -115,21 +115,10 @@
 */
 
 header{
-    background-color: rgb(57, 58, 65);
+    background-color: rgb(52, 52, 59);
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
-    color: white; 
-    h1,h2{
-        display: flex;
-        justify-content: center;
-        align-items: center;               
-        > span{    
-            margin: 10px;                  
-            background:linear-gradient(45deg, rgb(207, 95, 202) 35%, rgb(106, 157, 211) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    }
+    color: white;     
 
     
 

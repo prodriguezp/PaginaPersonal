@@ -1,1 +1,3 @@
-<p>inicio works!</p>
+<div *ngFor="let number of getArrImagesLenght()" class="container">    
+    <app-grid-imagenes [items]=getTwoImages(number) [bool]=getBool()></app-grid-imagenes>
+</div>
