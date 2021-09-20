@@ -10,7 +10,12 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { Routes, RouterModule } from '@angular/router';
 import { InicioComponent } from './inicio/inicio.component';
-import { GridImagenesComponent } from './componentes/grid-imagenes/grid-imagenes.component'; // CLI
+import { GridImagenesComponent } from './componentes/grid-imagenes/grid-imagenes.component';
+import { ProyectosComponent } from './proyectos/proyectos.component';
+import { ItemProyectoComponent } from './componentes/item-proyecto/item-proyecto.component';
+import { ItemMantenimientoComponent } from './componentes/item-mantenimiento/item-mantenimiento.component';
+import { TecnologiasComponent } from './componentes/tecnologias/tecnologias.component';
+import { ListasFooterComponent } from './componentes/listas-footer/listas-footer.component'; // CLI
 
 @NgModule({
   declarations: [
@@ -19,14 +24,18 @@ import { GridImagenesComponent } from './componentes/grid-imagenes/grid-imagenes
     BannerComponent,
     FooterComponent,
     InicioComponent,
-    GridImagenesComponent
+    GridImagenesComponent,
+    ProyectosComponent,
+    ItemProyectoComponent,
+    ItemMantenimientoComponent,
+    TecnologiasComponent,
+    ListasFooterComponent
   ],
   imports: [
     RouterModule.forRoot([      
       { path: '',component: InicioComponent},
-      { path: 'footer',component: FooterComponent},
-      { path: 'header',component: HeaderComponent},
-      { path: 'banner',component: BannerComponent},
+      { path: 'proyectos',component: ProyectosComponent},
+      { path: 'contacto',component: ItemMantenimientoComponent},      
 
     ]),
     BrowserModule,

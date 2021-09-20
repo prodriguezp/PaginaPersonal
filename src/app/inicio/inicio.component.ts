@@ -15,12 +15,12 @@ export class InicioComponent implements OnInit {
     this.items = [{
       image: this.url + "imagen3.jpg",
       titulo: "Presentación",
-      texto: "Me presento, soy Pedro Luis y soy programador graduado en <span>Grado Superior de Desarrollador  de Aplicaciones Multiplataformas</span> y <span>Grado Superior en Desarrollo de Aplicaciones Web</span>. Actualemente soy Programador FullStack en la empresa Qualisys trabajando con tecnologias Web FrontEnd (HTML, CSS, JS, Cordova, JQuery ...)  y como tecnologias BackEnd (Cosmos, Wordpress, PrestaShop... ) "
+      texto: "Me presento, soy Pedro Luis y soy programador graduado en <span>Grado Superior de Desarrollador  de Aplicaciones Multiplataformas</span> y <span>Grado Superior en Desarrollo de Aplicaciones Web</span>. Actualemente soy Programador FullStack en la empresa Qualisys trabajando con tecnologias Web FrontEnd (HTML, CSS, JS, Cordova, JQuery ...)  y como tecnologias BackEnd (Cosmos, Wordpress, PrestaShop... ). Tambien domino tecnologias mas actuales como son Angular, Android, Java, Symfony/PHP ... "
     }, {
       image: this.url + "imagen4.jpg",
       titulo: "Quien soy",
       texto: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    }, {
+    }/*, {
       image: this.url + "imagen1.jpg",
       titulo: "Quien soy",
       texto: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -28,7 +28,7 @@ export class InicioComponent implements OnInit {
       image: this.url + "imagen2.jpg",
       titulo: "Quien soy",
       texto: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    }
+    }*/
   
     ]
     this.lenght = this.items.length / 2;

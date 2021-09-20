@@ -1,0 +1,6 @@
+<div class="container">
+    <app-item-proyecto *ngFor="let proyecto of proyectos; let odd = odd" [titulo]="proyecto.titulo"
+        [descripcion]="proyecto.descripcion"
+        [img]="proyecto.img"
+        [invert]="odd"></app-item-proyecto>
+</div>
