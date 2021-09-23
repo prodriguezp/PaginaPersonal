@@ -1,4 +1,16 @@
 .footer{
+    font-family: 'Open Sans Condensed', sans-serif;
     background: #34343b;
-    display: flex;    
+    .listas{
+        display: flex;    
+    }
+    .copy{
+        color: white;
+        text-align: center;
+        width: 100%;
+        font-family: 'Open Sans Condensed', sans-serif;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background-color: #393941;
+    }
 }

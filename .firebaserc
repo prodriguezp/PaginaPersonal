@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "pldev-e9106": {
+      "hosting": {
+        "PaginaPersonal": [
+          "pldev-e9106"
+        ]
+      }
+    }
+  }
+}

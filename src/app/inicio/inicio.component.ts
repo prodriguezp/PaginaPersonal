@@ -15,7 +15,7 @@ export class InicioComponent implements OnInit {
     this.items = [{
       image: this.url + "imagen3.jpg",
       titulo: "Presentación",
-      texto: "Me presento, soy Pedro Luis y soy programador graduado en <span>Grado Superior de Desarrollador  de Aplicaciones Multiplataformas</span> y <span>Grado Superior en Desarrollo de Aplicaciones Web</span>. Actualemente soy Programador FullStack en la empresa Qualisys trabajando con tecnologias Web FrontEnd (HTML, CSS, JS, Cordova, JQuery ...)  y como tecnologias BackEnd (Cosmos, Wordpress, PrestaShop... ). Tambien domino tecnologias mas actuales como son Angular, Android, Java, Symfony/PHP ... "
+      texto: "Me presento, soy Pedro Luis y soy programador graduado en Grado Superior de Desarrollador de Aplicaciones Multiplataformas y Grado Superior en Desarrollo de Aplicaciones Web. Actualmente soy Programador FullStack en la empresa Qualisys trabajando con tecnologías Web FrontEnd (HTML, CSS, JS, Cordova, JQuery ...) y como tecnologías BackEnd (Cosmos, Wordpress, PrestaShop... ). Tambien domino tecnologías más actuales como son Angular, Android, Java, Symfony/PHP ..."
     }, {
       image: this.url + "imagen4.jpg",
       titulo: "Quien soy",

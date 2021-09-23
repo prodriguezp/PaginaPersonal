@@ -15,10 +15,17 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 import { ItemProyectoComponent } from './componentes/item-proyecto/item-proyecto.component';
 import { ItemMantenimientoComponent } from './componentes/item-mantenimiento/item-mantenimiento.component';
 import { TecnologiasComponent } from './componentes/tecnologias/tecnologias.component';
-import { ListasFooterComponent } from './componentes/listas-footer/listas-footer.component'; // CLI
+import { ListasFooterComponent } from './componentes/listas-footer/listas-footer.component';
+import { LoginComponent } from './componentes/login/login.component'; // CLI
+import { environment } from 'src/environments/environment';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabase, AngularFireDatabaseModule}  from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { AuthGuard } from './guards/auth.guard';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 @NgModule({
-  declarations: [
+  declarations: [    
     AppComponent,
     HeaderComponent,
     BannerComponent,
@@ -29,20 +36,28 @@ import { ListasFooterComponent } from './componentes/listas-footer/listas-footer
     ItemProyectoComponent,
     ItemMantenimientoComponent,
     TecnologiasComponent,
-    ListasFooterComponent
+    ListasFooterComponent,
+    LoginComponent,
+    AdminPanelComponent
   ],
   imports: [
+        
     RouterModule.forRoot([      
       { path: '',component: InicioComponent},
       { path: 'proyectos',component: ProyectosComponent},
       { path: 'contacto',component: ItemMantenimientoComponent},      
-
+      { path: 'login',component: LoginComponent},            
+      { path: 'admin',component: AdminPanelComponent}, 
     ]),
     BrowserModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {  
+    
+}

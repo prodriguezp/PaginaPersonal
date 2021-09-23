@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
 
-
+import { AuthService } from 'src/app/services/auth.service';
+import { AngularFireAuth } from '@angular/fire/auth';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -10,9 +11,18 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 export class HeaderComponent implements OnInit {
   mostrar = false;
   vistaMovil = true;
-  constructor() { }
+  logeado = false;  
+  admin = false;
+  emailsAdmin = [
+    "pedroluisrp1998@gmail.com",
+    "robgherdev@gmail.com"    
+  ]
+  constructor(public afsAuth: AngularFireAuth, public authService: AuthService) { 
+    this.admin = false; 
+  }
 
   ngOnInit(): void {
+    this.getCurrentUser();
     this.cambiar(this.mostrar)
 
     window.onresize = (e) => {
@@ -22,38 +32,45 @@ export class HeaderComponent implements OnInit {
 
     };
 
-    /*let displayer = document.querySelector(".displayer");
-    displayer.addEventListener("focus",e=>{      
-      document.querySelectorAll(".item-header").forEach(item=>{
-        this.mostrar = true;
-        console.log("entra");
-                        
-      });
-    })
-
-    displayer.addEventListener("focusout",e=>{
-      document.querySelectorAll(".item-header").forEach(item=>{
-        this.mostrar = false;  
-        console.log("sale");              
-      });      
-    })*/
-
+    
   }
   cambiar(bool) {
     if (screen.width <= 759) {
       this.vistaMovil = true
-      console.log(bool);
 
       this.mostrar = bool
     }
     else {
-      this.vistaMovil= false;
+      this.vistaMovil = false;
       this.mostrar = true;
     }
-
-
-
-
-
   }
+
+  getCurrentUser() {
+    this.authService.isAuth().subscribe(auth => {
+      if (auth) {
+        if(this.emailsAdmin.includes(auth.email)){                    
+          this.admin = true;
+        }        
+        else{   
+          this.admin = false;
+        }
+        this.logeado = true;        
+
+      }
+      else {
+        this.logeado = false;  
+        this.admin = false;      
+        console.log("NO LOGEADO");
+
+      }
+    })
+  }
+
+  onLogOut() {        
+    this.admin = false;        
+    this.afsAuth.signOut();
+    this.getCurrentUser();
+  }
+
 }

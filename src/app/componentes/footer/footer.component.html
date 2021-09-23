@@ -1,3 +1,9 @@
 <div class="footer">
-    <app-listas-footer *ngFor="let lista of listas" [titulo]="lista.titulo" [itemLista]="lista.lista"></app-listas-footer>
+    <div class="listas">
+        <app-listas-footer *ngFor="let lista of listas" [titulo]="lista.titulo" [itemLista]="lista.lista"></app-listas-footer>    
+    </div>    
+    <div class="copy">
+        Página web desarrollada y diseñada por Pedro Luis Rodríguez Pérez
+    </div>
 </div>
+

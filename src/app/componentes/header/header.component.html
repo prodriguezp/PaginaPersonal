@@ -18,6 +18,9 @@
         <div routerLink="/" routerLinkActive="active-header-item">INICIO</div>
         <div routerLink="/proyectos" routerLinkActive="active-header-item">PROYECTOS</div>
         <div routerLink="/contacto" routerLinkActive="active-header-item">CONTACTO</div>    
+        <div *ngIf="admin" routerLink="/contacto" routerLinkActive="active-header-item">PANEL ADMIN</div>    
+        <div *ngIf="!logeado" routerLink="/login" routerLinkActive="active-header-item">LOG IN</div>            
+        <div *ngIf="logeado"  (click)="onLogOut()">CERRAR SESIÓN</div>       
     </nav>
 
 </header>
