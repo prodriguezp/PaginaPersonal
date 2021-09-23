@@ -16,12 +16,12 @@ export class LoginComponent implements OnInit {
   }
 
   onLoginGoogle(){
-    console.log(this.afAuth.signInWithPopup(new auth.GoogleAuthProvider()));    
+    this.afAuth.signInWithPopup(new auth.GoogleAuthProvider());
     this.authService.admin = true;
     this.route.navigate(['/']);
   }
-  onLogOut(){            
-    this.afAuth.signOut();    
+  onLogOut(){
+    this.afAuth.signOut();
   }
 
 }

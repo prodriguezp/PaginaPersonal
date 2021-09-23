@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "PaginaPersonal"
+  "defaultProject": "PaginaPersonal",
+  "cli": {
+    "analytics": false
+  }
 }

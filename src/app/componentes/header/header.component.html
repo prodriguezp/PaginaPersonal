@@ -1,11 +1,11 @@
 <!--<div class="header-parent">
-    
-    <header>                
+
+    <header>
         <a href="#" class="displayer" (click)="cambiar(!mostrar)" ><mat-icon>reorder</mat-icon></a>
         <div class="item-header-logo"><img src="assets/img/ajustes.png" alt="">PL.Dev</div>
         <div [style.height]="mostrar ? '30px' : '0px' " class="item-header" >Inicio</div>
         <div [style.height]="mostrar ? '30px' : '0px' " class="item-header" >Proyectos</div>
-        <div [style.height]="mostrar ? '30px' : '0px' " class="item-header" >Contacta</div>        
+        <div [style.height]="mostrar ? '30px' : '0px' " class="item-header" >Contacta</div>
     </header>
 </div>
 
@@ -17,10 +17,12 @@
     <nav>
         <div routerLink="/" routerLinkActive="active-header-item">INICIO</div>
         <div routerLink="/proyectos" routerLinkActive="active-header-item">PROYECTOS</div>
-        <div routerLink="/contacto" routerLinkActive="active-header-item">CONTACTO</div>    
-        <div *ngIf="admin" routerLink="/contacto" routerLinkActive="active-header-item">PANEL ADMIN</div>    
-        <div *ngIf="!logeado" routerLink="/login" routerLinkActive="active-header-item">LOG IN</div>            
-        <div *ngIf="logeado"  (click)="onLogOut()">CERRAR SESIÓN</div>       
+        <div routerLink="/contacto" routerLinkActive="active-header-item">CONTACTO</div>
+        <div *ngIf="admin" routerLink="/admin" routerLinkActive="active-header-item">PANEL ADMIN</div>
+        <div *ngIf="!logeado" routerLink="/login" routerLinkActive="active-header-item">LOG IN</div>
+        <div *ngIf="logeado"  (click)="onLogOut()">CERRAR SESIÓN</div>
+        <h6>Admin : {{admin}}</h6>
+        <h6>Logeado : {{logeado}}</h6>
     </nav>
 
 </header>
