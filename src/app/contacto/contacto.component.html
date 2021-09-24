@@ -1,0 +1,20 @@
+<form (submit)="enviar($event)">
+    <div>
+        <label for="email">Email</label>
+        <input type="email" [(ngModel)]="email" name="email">
+    </div>
+    <div>
+        <label for="Nombre">Nombre</label>
+        <input type="text" [(ngModel)]="nombre" name="nombre">
+    </div>
+    <div>
+        <label for="Contenido">Contenido</label>
+        <textarea [(ngModel)]="contenido" name="contenido">
+
+        </textarea>
+
+    </div>
+    
+    <button type="submit">Enviar</button>
+    <small *ngIf="mostrarEnviado" class="text-success">Mensaje enviado correctamente</small>
+</form>

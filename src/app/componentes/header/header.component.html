@@ -21,8 +21,8 @@
         <div *ngIf="admin" routerLink="/admin" routerLinkActive="active-header-item">PANEL ADMIN</div>
         <div *ngIf="!logeado" routerLink="/login" routerLinkActive="active-header-item">LOG IN</div>
         <div *ngIf="logeado"  (click)="onLogOut()">CERRAR SESIÓN</div>
-        <h6>Admin : {{admin}}</h6>
-        <h6>Logeado : {{logeado}}</h6>
+        <!--<h6>Admin : {{admin}}</h6>
+        <h6>Logeado : {{logeado}}</h6>-->
     </nav>
 
 </header>

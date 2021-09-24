@@ -24,6 +24,8 @@ import { AngularFireDatabase, AngularFireDatabaseModule}  from '@angular/fire/da
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AuthGuard } from './guards/auth.guard';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { FormBuilder, FormsModule } from '@angular/forms';
+import { ContactoComponent } from './contacto/contacto.component';
 @NgModule({
   declarations: [    
     AppComponent,
@@ -38,14 +40,15 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     TecnologiasComponent,
     ListasFooterComponent,
     LoginComponent,
-    AdminPanelComponent
+    AdminPanelComponent,
+    ContactoComponent
   ],
   imports: [
         
     RouterModule.forRoot([      
       { path: '',component: InicioComponent},
       { path: 'proyectos',component: ProyectosComponent},
-      { path: 'contacto',component: ItemMantenimientoComponent},      
+      { path: 'contacto',component: ContactoComponent},      
       { path: 'login',component: LoginComponent},            
       { path: 'admin',component: AdminPanelComponent}, 
     ]),
@@ -53,9 +56,13 @@ import { AdminPanelComponent } from './admin-panel/admin-panel.component';
     BrowserAnimationsModule,
     MatIconModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    FormsModule
   ],
-  providers: [AngularFireAuth],
+  providers: [
+    AngularFireAuth,
+    FormBuilder
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {  
